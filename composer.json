@@ -1,0 +1,53 @@
+{
+    "name": "stefanbauer/ignition-laracasts-tab",
+    "description": "A tab to retrieve laracasts.com answers",
+    "keywords": [
+        "laravel",
+        "flare",
+        "ignition"
+    ],
+    "homepage": "https://github.com/stefanbauer/ignition-laracasts-tab",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Bauer",
+            "email": "mail@stefanbauer.me",
+            "role": "Developer"
+        },
+        {
+            "name": "Bobby Bouwmann",
+            "email": "bobbybouwmann@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "fabpot/goutte": "^3.2",
+        "facade/ignition": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*|^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StefanBauer\\LaracastsTab\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StefanBauer\\LaracastsTab\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "StefanBauer\\LaracastsTab\\TabServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
