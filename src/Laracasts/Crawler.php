@@ -30,7 +30,7 @@ class Crawler
         $crawler->filter('div.conversation-list-item')->each(function (BaseCrawler $listItem) use ($results) {
             $result = (new Result(
                 $listItem->filter('a.conversation-list-link')->first()->text(),
-                static::BASE_URL . $listItem->filter('a.conversation-list-link')->first()->attr('href')
+                static::BASE_URL . substr($listItem->filter('a.conversation-list-link')->first()->attr('href'), 1)
             ))->byAuthor(
                 $listItem->filter('.conversation-list-title div a.tw-uppercase')->first()->text(),
                 $listItem->filter('.conversation-list-title div a.tw-uppercase')->first()->attr('href')
