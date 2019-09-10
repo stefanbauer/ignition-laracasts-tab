@@ -13,7 +13,7 @@ This package adds a tab which shows matching [laracasts.com](https://laracasts.c
 You can install the package in to a Laravel app that uses [Ignition](https://flareapp.io) via composer:
 
 ```bash
-composer require stefanbauer/ignition-laracasts-tab
+composer require stefanbauer/ignition-laracasts-tab --dev
 ```
 
 ## Usage
